@@ -10,11 +10,13 @@ import TupleCountsPage from "../page/TupleCounts/TupleCounts";
 import SectorVariancePage from "../page/variance/SectorVariancePage";
 
 const PANEL_BODY  = {
-    Growth: GrowthPage,
-    Contribution: '/contribution',
-    "Weather condition": '/news-influence',
-    Economy: '/economy',
-    Distribution: '/distribution'
+    "Queries Description": '/tuple-counts',
+    "Weather condition": '/news-influence',  
+    "Covid Epidemic": '/econ-influence',
+    "Seasons Impact": '/growth',
+    "Population Density": '/contribution',
+    "Road features": '/risk-reward',
+    "Frequent Hours": '/tuple-counts'
 }
 
 const MainLayout = ({children}) => (
