@@ -1,7 +1,7 @@
 import classes from "./layout.module.scss";
 import Panel from "../panel/Panel";
 import {Route, Routes} from "react-router";
-import GrowthPage from "../page/GrowthPage";
+import WeatherCondition from "../page/WeatherCondition";
 import {StaticDataContext, StaticDataProvider} from "../context/StaticDataContext";
 import Contribution from "../page/contribution/Contribution";
 import NewsInfluencePage from "../page/news/NewsInfluencePage";
@@ -10,13 +10,13 @@ import TupleCountsPage from "../page/TupleCounts/TupleCounts";
 import SectorVariancePage from "../page/variance/SectorVariancePage";
 
 const PANEL_BODY  = {
-    "Queries Description": '/tuple-counts',
-    "Weather condition": '/news-influence',  
-    "Covid Epidemic": '/econ-influence',
-    "Seasons Impact": '/growth',
-    "Population Density": '/contribution',
-    "Road features": '/risk-reward',
-    "Frequent Hours": '/tuple-counts'
+    "Queries Description": '/description',
+    "Weather condition": '/weather-condition',  
+    "Covid Epidemic": '/covid-epidemic',
+    "Seasons Impact": '/seasons-impact',
+    "Population Density": '/population-density',
+    "Road features": '/road-features',
+    "Frequent Hours": '/frequent-hours'
 }
 
 const MainLayout = ({children}) => (
@@ -25,9 +25,8 @@ const MainLayout = ({children}) => (
             <Panel/>
         </div>
         <div className={classes.displayPage}>
-            <StaticDataProvider>
                 <Routes>
-                    <Route path={"/growth"} element={<GrowthPage/>} />
+                    <Route path={"/weather-condition"} element={<WeatherCondition/>} />
                     <Route path={"/contribution"} element={<Contribution />} />
                     <Route path={"/news-influence"} element={<NewsInfluencePage />} />
                     <Route path={"/econ-influence"} element={<EconInfluencePage />} />
@@ -37,7 +36,6 @@ const MainLayout = ({children}) => (
                     {/*    <ROIPage />*/}
                     {/*</Route>*/}
                 </Routes>
-            </StaticDataProvider>
         </div>
     </div>
 );

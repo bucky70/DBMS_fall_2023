@@ -1,8 +1,9 @@
 import Request from "./Request";
 
-const getAllStocks = async () => {
+const getAllCityState = async (data) => {
     try {
-        var response = await Request.get('stocks/all');
+        let response=await Request.get('http://localhost:80/query7');;
+        
         if(response.status === 200 && !response.data.error) {
             return response.data.data;
         } else {
@@ -14,4 +15,4 @@ const getAllStocks = async () => {
     }
 }
 
-export {getAllStocks}
+export {getAllCityState}

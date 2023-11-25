@@ -9,24 +9,15 @@ import * as yup from "yup";
 import FEMultiElementSelect from "../component/form/MultiSelect";
 import RangeSlider from "../component/form/RangeSlider";
 import SubmitButton from "../component/form/SubmitButton";
+import DropDownSelect from "../component/form/DropdownSelect";
+import {CITY_STATE} from "../constant/constants";
 
-const GrowthForm = ({onFormSubmit}) => {
+const WeatherForm = ({onFormSubmit}) => {
 
-    const staticData = useContext(StaticDataContext);
-
-    var entries = Object.entries(staticData)
-        .map(([key, value]) => value ? value.map((val) => `${key}:${val}`) : [])
-        .flat();
-
-    entries = [...entries, 'covid:COVID'];
-
-    const entriesOption = entries.map(
-        (entry) => {
-            const [type, value] = entry.split(':');
-
-            return {label: `${type} - ${value}`, value: entry}
-        }
-    )
+    const entriesOption = CITY_STATE.map(entry => ({
+        label: `${entry.CITY}:${entry.STATE}`,
+        value: `${entry.CITY}:${entry.STATE}`
+    }));
 
     const validationSchema = yup.object(
         {
@@ -44,7 +35,7 @@ const GrowthForm = ({onFormSubmit}) => {
     const initialValue = {
         range: {
             minYear: 2016,
-            maxYear: 2021,
+            maxYear: 2022,
         },
         aggBy: 'MONTH',
         symbol: []
@@ -72,36 +63,18 @@ const GrowthForm = ({onFormSubmit}) => {
                             {/*                 options={entriesOption}/>*/}
                             {/*</div>*/}
 
-                            <RadioGroup
-                                name={'aggBy'}
+                            <DropDownSelect
+                                name="wcYears"
                                 options={[
-                                    {label: 'Month', value: 'MONTH'},
-                                    {label: 'Quarter', value: 'QUARTER'},
+                                    { label: "2016", value: 2016 },
+                                    { label: "2017", value: 2017 },
+                                    { label: "2018", value: 2018 },
+                                    { label: "2019", value: 2019 },
+                                    { label: "2020", value: 2020 },
+                                    { label: "2021", value: 2021 },
+                                    { label: "2022", value: 2022 },
                                 ]}
-                                />
-
-                            <RangeSlider minYear={2015} maxYear={2022} name={"range"} />
-
-                            {/*<Multirangeslider*/}
-                            {/*    className={classes.formElement}*/}
-                            {/*    min={2000}*/}
-                            {/*    max={2022}*/}
-                            {/*    minValue={formik.values.minValue}*/}
-                            {/*    maxValue={formik.values.maxValue}*/}
-                            {/*    onInput={({minValue, maxValue}) => {*/}
-                            {/*        formik.setFieldValue('minYear', minValue)*/}
-                            {/*        formik.setFieldValue('maxYear', maxValue)*/}
-                            {/*    }}*/}
-                            {/*    step={1}*/}
-                            {/*    style={{*/}
-                            {/*        border: 'none',*/}
-                            {/*        boxShadow: 'none'*/}
-                            {/*    }}*/}
-                            {/*    label={true}*/}
-                            {/*    ruler={false}*/}
-                            {/*    barInnerColor={'lightblue'}*/}
-                            {/*/>*/}
-
+                            />
                             <SubmitButton formik={formik} />
                         </div>
                     )
@@ -111,4 +84,4 @@ const GrowthForm = ({onFormSubmit}) => {
     )
 }
 
-export default GrowthForm;
+export default WeatherForm;

@@ -3,13 +3,13 @@ import {NavLink} from "react-router-dom";
 import clsx from "clsx";
 
 const URL_DISPLAY_MAPPING = {
-    "Queries Description": '/tuple-counts',
-    "Weather condition": '/news-influence',  
-    "Covid Epidemic": '/econ-influence',
-    "Seasons Impact": '/growth',
-    "Population Density": '/contribution',
-    "Road features": '/risk-reward',
-    "Frequent Hours": '/tuple-counts'
+    "Queries Description": '/description',
+    "Weather condition": '/weather-condition',  
+    "Covid Epidemic": '/covid-epidemic',
+    "Seasons Impact": '/seasons-impact',
+    "Population Density": '/population-density',
+    "Road features": '/road-features',
+    "Frequent Hours": '/frequent-hours'
     
 }
 
