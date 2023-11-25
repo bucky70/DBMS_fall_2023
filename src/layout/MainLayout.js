@@ -3,7 +3,7 @@ import Panel from "../panel/Panel";
 import {Route, Routes} from "react-router";
 import WeatherCondition from "../page/WeatherCondition";
 import {StaticDataContext, StaticDataProvider} from "../context/StaticDataContext";
-import Contribution from "../page/contribution/Contribution";
+import CovidEpidemic from "../page/CovidEpidemic";
 import NewsInfluencePage from "../page/news/NewsInfluencePage";
 import EconInfluencePage from "../page/econinfluece/EconInfluencePage";
 import TupleCountsPage from "../page/TupleCounts/TupleCounts";
@@ -27,7 +27,7 @@ const MainLayout = ({children}) => (
         <div className={classes.displayPage}>
                 <Routes>
                     <Route path={"/weather-condition"} element={<WeatherCondition/>} />
-                    <Route path={"/contribution"} element={<Contribution />} />
+                    <Route path={"/covid-epidemic"} element={<CovidEpidemic />} />
                     <Route path={"/news-influence"} element={<NewsInfluencePage />} />
                     <Route path={"/econ-influence"} element={<EconInfluencePage />} />
                     <Route path={"/risk-reward"} element={<SectorVariancePage />} />

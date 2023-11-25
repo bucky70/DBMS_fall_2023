@@ -19,6 +19,12 @@ export const YLABEL_PROPERTIES = {value: "Cumulative M. Cap", angle: -90, positi
 export const XLABEL_WC_PROPERTIES = {value: "Weather Condition", angle: 0, position: "outsideCenter", dy: 20}
 export const YLABEL_WC_PROPERTIES = {value: "Incident Count", angle: -90, position: "outsideCenter", dx: -42}
 
+export const XLABEL_CI_PROPERTIES = {value: "Covid Impact", angle: 0, position: "outsideCenter", dy: 20}
+export const YLABEL_CI_PROPERTIES = {value: "Incident Count", angle: -90, position: "outsideCenter", dx: -42}
+
+export const XLABEL_NCI_PROPERTIES = {value: "Non Covid Impact", angle: 0, position: "outsideCenter", dy: 20}
+export const YLABEL_NCI_PROPERTIES = {value: "Incident Count", angle: -90, position: "outsideCenter", dx: -42}
+
 export const COLORS = ['red', 'green', 'blue', 'orange', 'brown', 'pink', 'yellow', 'purple', 'cyan', 'black']
 
 export const CITY_STATE = [
