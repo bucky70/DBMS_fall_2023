@@ -4,6 +4,7 @@ import {Route, Routes} from "react-router";
 import WeatherCondition from "../page/WeatherCondition";
 import {StaticDataContext, StaticDataProvider} from "../context/StaticDataContext";
 import CovidEpidemic from "../page/CovidEpidemic";
+import RoadFeatures from "../page/RoadFeatures";
 import NewsInfluencePage from "../page/news/NewsInfluencePage";
 import EconInfluencePage from "../page/econinfluece/EconInfluencePage";
 import TupleCountsPage from "../page/TupleCounts/TupleCounts";
@@ -30,7 +31,7 @@ const MainLayout = ({children}) => (
                     <Route path={"/covid-epidemic"} element={<CovidEpidemic />} />
                     <Route path={"/news-influence"} element={<NewsInfluencePage />} />
                     <Route path={"/econ-influence"} element={<EconInfluencePage />} />
-                    <Route path={"/risk-reward"} element={<SectorVariancePage />} />
+                    <Route path={"/road-features"} element={<RoadFeatures />} />
                     <Route path={"/tuple-counts"} element={<TupleCountsPage />} />
                     {/*<Route path={"/roi"}>*/}
                     {/*    <ROIPage />*/}
