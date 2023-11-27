@@ -6,7 +6,7 @@ import {getAllCommodities} from "../service/CommoditiyService";
 import {getAllCryptoCurrencies} from "../service/CryptoService";
 import {getAllBondTenures} from "../service/TreasuryBondService";
 import {getAllIndicators} from "../service/IndicatorDataService";
-import {getAllStockIndices} from "../service/EconInfluence/EconInfluece";
+import {getAllStockIndices} from "../service/PopulationDensityService";
 import {getAllCityState} from "../service/CSService";
 
 

@@ -9,8 +9,8 @@ const URL_DISPLAY_MAPPING = {
     "Seasons Impact": '/seasons-impact',
     "Population Density": '/population-density',
     "Road features": '/road-features',
-    "Frequent Hours": '/frequent-hours'
-    
+    "Frequent Hours": '/frequent-hours',
+    "Total Tuple Count": '/tuple-counts'
 }
 
 const Panel = () => (
