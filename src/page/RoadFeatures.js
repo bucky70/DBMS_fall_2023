@@ -45,10 +45,11 @@ const RoadCondition = () => {
             {loading && <Skeleton duration={0.1} height={500}/>}
             {!loading && initiated && (
                 <div className={classes.graphContainer}>
+                    <h1>Weather Condition vs Average Severity </h1>
                     <BarChart data={data} {...SINGLE_GRAPH_DISPLAY_PROPERTIES}>
                         <CartesianGrid strokeDasharray="3 3" stroke={"#9e9e9e"}/>
                         <XAxis strokeWidth={2} fontWeight={'bold'} label={XLABEL_RF_PROPERTIES} dataKey={'xAxis'}/>
-                        <YAxis strokeWidth={2} fontWeight={'bold'} label={{...YLABEL_RF_PROPERTIES, value: 'Road Type'}}
+                        <YAxis strokeWidth={2} fontWeight={'bold'} label={{...YLABEL_RF_PROPERTIES, value: 'Incident Count'}}
                                tickFormatter={tickFormatter}/>
                         <Tooltip formatter={tooltipFormatter}/>
                         <Legend layout={"vertical"} align={"right"} verticalAlign={"top"}/>
