@@ -18,6 +18,7 @@ export const YLABEL_PROPERTIES = {value: "Cumulative M. Cap", angle: -90, positi
 
 export const XLABEL_WC_PROPERTIES = {value: "Weather Condition", angle: 0, position: "outsideCenter", dy: 20}
 export const YLABEL_WC_PROPERTIES = {value: "Incident Count", angle: -90, position: "outsideCenter", dx: -42}
+export const XLABEL_SEASON_PROPERTIES = {value: "Weather Condition", angle: 0, position: "outsideCenter", dy: 20}
 
 export const XLABEL_RF_PROPERTIES = {value: "Road Features", angle: 0, position: "outsideCenter", dy: 20}
 export const YLABEL_RF_PROPERTIES = {value: "Incident Count", angle: -90, position: "outsideCenter", dx: -42}

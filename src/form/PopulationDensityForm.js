@@ -1,12 +1,12 @@
-import {Formik, useFormik} from "formik";
+import {Formik} from "formik";
 import classes from "./form.module.scss";
 import * as yup from "yup";
-import FEMultiElementSelect from "../component/form/MultiSelect";
 import SubmitButton from "../component/form/SubmitButton";
 import DropDownSelect from "../component/form/DropdownSelect";
 import {CITY_STATE} from "../constant/constants";
+import FEMultiElementSelect from "../component/form/MultiSelect";
 
-const WeatherForm = ({onFormSubmit}) => {
+const PopulationDensityForm = ({onFormSubmit}) => {
 
     const entriesOption = CITY_STATE.map(entry => ({
         label: `${entry.CITY}:${entry.STATE}`,
@@ -50,7 +50,6 @@ const WeatherForm = ({onFormSubmit}) => {
                     return (
                         <div className={classes.horizontalForm}>
                             <FEMultiElementSelect options={entriesOption} name={"symbol"}/>
-
                             <DropDownSelect
                                 name="wcYears"
                                 options={[
@@ -62,8 +61,9 @@ const WeatherForm = ({onFormSubmit}) => {
                                     { label: "2021", value: 2021 },
                                     { label: "2022", value: 2022 },
                                 ]}
-                            />
+                            /> 
                             <SubmitButton formik={formik} />
+                            
                         </div>
                     )
                 }
@@ -72,4 +72,4 @@ const WeatherForm = ({onFormSubmit}) => {
     )
 }
 
-export default WeatherForm;
+export default PopulationDensityForm;

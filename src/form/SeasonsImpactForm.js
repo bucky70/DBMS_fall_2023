@@ -1,12 +1,13 @@
-import {Formik, useFormik} from "formik";
+import {Formik} from "formik";
 import classes from "./form.module.scss";
 import * as yup from "yup";
-import FEMultiElementSelect from "../component/form/MultiSelect";
-import SubmitButton from "../component/form/SubmitButton";
 import DropDownSelect from "../component/form/DropdownSelect";
+import SubmitButton from "../component/form/SubmitButton";
 import {CITY_STATE} from "../constant/constants";
+import FEMultiElementSelect from "../component/form/MultiSelect";
 
-const WeatherForm = ({onFormSubmit}) => {
+const SeasonsImpactForm = ({onFormSubmit}) => {
+
 
     const entriesOption = CITY_STATE.map(entry => ({
         label: `${entry.CITY}:${entry.STATE}`,
@@ -23,8 +24,6 @@ const WeatherForm = ({onFormSubmit}) => {
             symbol: yup.array().min(1).required()
         }
     )
-
-    // console.log(entries);
 
     const initialValue = {
         range: {
@@ -64,6 +63,7 @@ const WeatherForm = ({onFormSubmit}) => {
                                 ]}
                             />
                             <SubmitButton formik={formik} />
+
                         </div>
                     )
                 }
@@ -72,4 +72,4 @@ const WeatherForm = ({onFormSubmit}) => {
     )
 }
 
-export default WeatherForm;
+export default SeasonsImpactForm;
