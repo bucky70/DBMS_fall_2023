@@ -19,8 +19,7 @@ const QueryDescPage = () => {
 
 
 
-                <li class="OddListItem"> <br/> <h5> <a href="http://localhost:3000/seasons-impact" title=""> 3.  In what ways do seasons (such as summer and winter) or months exhibit higher
-frequency of specific incident types (like accidents, road block etc) over time? </a> </h5> <br/> 
+                <li class="OddListItem"> <br/> <h5> <a href="http://localhost:3000/seasons-impact" title=""> 3. How does the incident occurrence rate and severity vary over time in different states or regions of the United States due to seasonal changes, such summer and winter </a> </h5> <br/> 
                 <p>This query sorts car accidents in the United States by seasons—Winter, Spring, Summer, and Fall—based on their occurrence months. It calculates total incidents, the percentage for each month, and the deviation from the average monthly incident count. Additionally, it offers insights into the average severity of incidents and the percentage difference in severity from the monthly average. The query aims to uncover patterns and variations in accident rates and severity across seasons and months, contributing to a detailed understanding of the seasonal dynamics of car accidents.
                 </p>
                 </li>

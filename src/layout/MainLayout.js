@@ -28,6 +28,7 @@ const MainLayout = ({children}) => (
         </div>
         <div className={classes.displayPage}>
                 <Routes>
+                    <Route path={"/"} element={<QueryDescPage/>} />
                     <Route path={"/description"} element={<QueryDescPage/>} />
                     <Route path={"/weather-condition"} element={<WeatherCondition/>} />
                     <Route path={"/covid-epidemic"} element={<CovidEpidemic />} />

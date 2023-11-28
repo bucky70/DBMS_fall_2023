@@ -23,7 +23,7 @@ const queryClient = new QueryClient(
 );
 
 function App() {
-    useDocumentTitle("CarCrash");
+    useDocumentTitle("Accident Analyzer");
 
     return (
         <div className="App">
