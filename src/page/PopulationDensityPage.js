@@ -21,13 +21,12 @@ const PopulationDensityPage = () => {
         const { wcYears, symbol, range, aggBy } = submitValues;
         setLoading(true);
         console.log(`Passing request with ${submitValues}`);
-        const allCities = submitValues.symbol.map(symbol => symbol.split(':')[0]).join(', ');
-        const allStates = submitValues.symbol.map(symbol => symbol.split(':')[1]);
-        const uniqueValues = Array.from(new Set(allStates))
-        const pdData = await getAllPopulationDensityData({years: wcYears, City: allCities, State: uniqueValues.join(', ')});
+        //const allCities = submitValues.symbol.map(symbol => symbol.split(':')[0]).join(', ');
+        const allCitiesStates = submitValues.symbol.join(', ');
+        const pdData = await getAllPopulationDensityData({years: wcYears, City: allCitiesStates});
         pdData.sort((x,y)=> x.POPULATION_DENSITY< y.POPULATION_DENSITY)
 
-        setSymbols(submitValues.symbol.map(symbol => symbol.split(':')[0]));
+        setSymbols(submitValues.symbol.map(symbol => symbol.split(':')[0]));;
         const seasonsDataModified = rePivotGraphData(pdData, 'CITY', 'AVERAGE_SEVERITY', (datum) => datum.POPULATION_DENSITY);
         //console.log(`Received response as [ ${seasonsDataModified} ]`);
 

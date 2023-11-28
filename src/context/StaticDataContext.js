@@ -1,13 +1,5 @@
 import {createContext} from "react";
 import {useQueries} from "react-query";
-import {getAllWeatherData} from "../service/WeatherService";
-import {getAllSectors} from "../service/SectorService";
-import {getAllCommodities} from "../service/CommoditiyService";
-import {getAllCryptoCurrencies} from "../service/CryptoService";
-import {getAllBondTenures} from "../service/TreasuryBondService";
-import {getAllIndicators} from "../service/IndicatorDataService";
-import {getAllStockIndices} from "../service/PopulationDensityService";
-import {getAllCityState} from "../service/CSService";
 
 
 const StaticDataContext = createContext();

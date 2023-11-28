@@ -2,13 +2,13 @@ import classes from "./layout.module.scss";
 import Panel from "../panel/Panel";
 import {Route, Routes} from "react-router";
 import WeatherCondition from "../page/WeatherCondition";
-import {StaticDataContext, StaticDataProvider} from "../context/StaticDataContext";
 import CovidEpidemic from "../page/CovidEpidemic";
 import RoadFeatures from "../page/RoadFeatures";
 import SeasonsImpactPage from "../page/SeasonsImpactPage";
 import PopulationDensityPage from "../page/PopulationDensityPage";
 import TupleCountsPage from "../page/TupleCounts/TupleCounts";
-import SectorVariancePage from "../page/variance/SectorVariancePage";
+import QueryDescPage from "../page/QueriesDescription/QueryDescPage";
+import FrequentHours from "../page/FrequentHours";
 
 const PANEL_BODY  = {
     "Queries Description": '/description',
@@ -28,11 +28,13 @@ const MainLayout = ({children}) => (
         </div>
         <div className={classes.displayPage}>
                 <Routes>
+                    <Route path={"/description"} element={<QueryDescPage/>} />
                     <Route path={"/weather-condition"} element={<WeatherCondition/>} />
                     <Route path={"/covid-epidemic"} element={<CovidEpidemic />} />
                     <Route path={"/road-features"} element={<RoadFeatures />} />
                     <Route path={"/seasons-impact"} element={<SeasonsImpactPage />} />
                     <Route path={"/population-density"} element={<PopulationDensityPage />} />
+                    <Route path={"/frequent-hours"} element={<FrequentHours />} />
                     <Route path={"/tuple-counts"} element={<TupleCountsPage />} />
                     {/*<Route path={"/roi"}>*/}
                     {/*    <ROIPage />*/}

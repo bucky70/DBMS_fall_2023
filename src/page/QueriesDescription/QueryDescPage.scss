@@ -1,0 +1,35 @@
+.QueriesContainer {
+    padding-top: 1%;
+    padding-right: 2.3%;
+
+    h2 {
+        color: #2a3342;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    li {
+        border-bottom: 2px solid #2a3342;
+    }
+
+    .OddListItem {
+        background: rgba(129, 175, 173, 0.2);
+        border-bottom: 2px solid #2a3342;
+    }
+
+    a {
+        color: #2a3342;
+    }
+
+    a:link {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+
+}

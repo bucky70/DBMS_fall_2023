@@ -5,7 +5,7 @@ import {getAllWeatherData} from "../service/WeatherService";
 import Skeleton from "react-loading-skeleton";
 import {rePivotGraphData} from "../service/GraphDataService";
 import {Bar,BarChart, CartesianGrid, Legend, Line, LineChart, Tooltip, XAxis, YAxis} from "recharts";
-import {SINGLE_GRAPH_DISPLAY_PROPERTIES, XLABEL_WC_PROPERTIES, YLABEL_WC_PROPERTIES} from "../constant/constants";
+import {SINGLE_GRAPH_DISPLAY_PROPERTIES, XLABEL_WC_PROPERTIES, YLABEL_WC_PROPERTIES,YLABEL_AS_PROPERTIES} from "../constant/constants";
 
 const WeatherCondition = () => {
     const [loading, setLoading] = useState(false);
@@ -28,7 +28,7 @@ const WeatherCondition = () => {
         const weatherDataModified = rePivotGraphData(weatherData, 'CITY', 'NUMBER_OF_ACCIDENTS', (datum) => datum.WEATHER_CONDITION);
         const weatherDataModified1 = rePivotGraphData(weatherData, 'CITY', 'AVERAGE_SEVERITY', (datum) => datum.WEATHER_CONDITION);
         console.log(`Received response as [ ${weatherDataModified} ]`);
-
+        console.log(`Received response as [ ${weatherDataModified} ]`);
         setData(weatherDataModified);
         setData1(weatherDataModified1);
         setData2(weatherData);
@@ -63,7 +63,7 @@ const WeatherCondition = () => {
                     <BarChart data={data1} {...SINGLE_GRAPH_DISPLAY_PROPERTIES}>
                         <CartesianGrid strokeDasharray="3 3" stroke={"#9e9e9e"}/>
                         <XAxis strokeWidth={2} fontWeight={'bold'} label={XLABEL_WC_PROPERTIES} dataKey={'xAxis'}/>
-                        <YAxis strokeWidth={2} fontWeight={'bold'} label={{...YLABEL_WC_PROPERTIES, value: 'Average Severity'}}
+                        <YAxis strokeWidth={2} fontWeight={'bold'} label={{...YLABEL_AS_PROPERTIES, value: 'Average Severity'}}
                                tickFormatter={tickFormatter}/>
                         <Tooltip formatter={tooltipFormatter}/>
                         <Legend layout={"vertical"} align={"right"} verticalAlign={"top"}/>

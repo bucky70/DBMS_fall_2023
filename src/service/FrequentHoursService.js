@@ -1,8 +1,10 @@
 import Request from "./Request";
 
-const getAllCryptoCurrencies = async () => {
+const getFrequentHoursData = async (data) => {
     try {
-        var response = await Request.get('cryptos/all');
+        let response;
+        response = await Request.post('http://localhost:80/query6', {"Year": data.years , "City":data.City, "State": data.State });
+        
         if(response.status === 200 && !response.data.error) {
             return response.data.data;
         } else {
@@ -14,4 +16,4 @@ const getAllCryptoCurrencies = async () => {
     }
 }
 
-export {getAllCryptoCurrencies}
+export {getFrequentHoursData}

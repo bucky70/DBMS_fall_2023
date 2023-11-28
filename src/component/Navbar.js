@@ -1,5 +1,4 @@
 import classes from "./navbar.module.scss";
-import logo from "../assets/logo.svg";
 import car from "../assets/car-crash.svg";
 
 const Navbar = ({}) => (
